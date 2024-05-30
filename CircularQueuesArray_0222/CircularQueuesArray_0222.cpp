@@ -113,7 +113,48 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Queues q;
+    char ch;
+
+    while (true) {
+        try {
+            cout << "Menu" << endl;
+            cout << "1. Implement insert operation" << endl;
+            cout << "2. Implement insert operation" << endl;
+            cout << "3. Display values" << endl;
+            cout << "4. Exit" << endl;
+            cout << "Enter your choice (1-4): ";
+            cin >> ch;
+            cout << endl;
+
+            switch (ch) {
+            case '1': {
+                q.insert();
+                break;
+            }
+            case '2': {
+                q.remove();
+                break;
+            }
+            case '3': {
+                q.display();
+                break;
+            }
+            case '4': {
+                q.insert();
+                return 0;
+            }
+            default: {
+                cout << "Invalid option!!" << endl;
+                break;
+            }
+            }
+        }
+        catch (exception& e) {
+            cout << "Check for the values entered." << endl;
+        }
+    }
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
