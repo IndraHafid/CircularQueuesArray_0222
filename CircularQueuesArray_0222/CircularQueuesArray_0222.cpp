@@ -10,6 +10,8 @@ private:
     int FRONT, REAR;
     int queue_array[max];
 
+public:
+   
 };
 
 int main()
